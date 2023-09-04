@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   const getUser = async () => {
-    let result = await fetch('http://localhost:5000/list');
+    let result = await fetch('https://test-mern-api-psi.vercel.app/list');
     result = await result.json();
     setUsers(result)
   }
