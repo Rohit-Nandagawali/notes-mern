@@ -22,7 +22,7 @@ import ModalClose from '@mui/joy/ModalClose';
 import { Stack, ModalDialog, Textarea } from '@mui/joy';
 
 const deleteNote = async (id, getNotes) => {
-    const response = await fetch(`http://localhost:5000/delete/${id}`, {
+    const response = await fetch(`https://test-mern-api-psi.vercel.app/delete/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const deleteNote = async (id, getNotes) => {
 const updateNote = async (id, title, description, getNotes) => {
 
 
-    let response = await fetch(`http://localhost:5000/update/${id}`, {
+    let response = await fetch(`https://test-mern-api-psi.vercel.app/update/${id}`, {
         method: 'put',
         body: JSON.stringify({ title, description }),
         headers: {
@@ -113,8 +113,8 @@ export default function NoteCard({ title, description, updated, id, getNotes }) 
         <Sheet
             sx={{
                 width: 300,
-                py: 3, // padding top & bottom
-                px: 2, // padding left & right
+                py: 3,
+                px: 2,
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 2,
