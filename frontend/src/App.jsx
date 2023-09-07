@@ -36,7 +36,7 @@ function App() {
   // getting notes
   const getNotes = async () => {
     console.log("get notes called");
-    let result = await fetch('http://localhost:5000/list');
+    let result = await fetch('https://test-mern-api-psi.vercel.app/list');
     result = await result.json();
     setNotes(result)
   }
@@ -45,7 +45,7 @@ function App() {
   const searchHandle = async (e) => {
     let key = e.target.value
     if (key) {
-      let result = await fetch(`http://localhost:5000/search/${key}`);
+      let result = await fetch(`https://test-mern-api-psi.vercel.app/search/${key}`);
       result = await result.json();
       if (result)
         setNotes(result)
@@ -61,7 +61,7 @@ function App() {
     const [description, setDescription] = useState("");
 
     const newNote = async () => {
-      const response = await fetch('http://localhost:5000/new', {
+      const response = await fetch('https://test-mern-api-psi.vercel.app/new', {
         method: 'POST',
         body: JSON.stringify({ title, description }),
         headers: {
