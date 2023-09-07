@@ -164,9 +164,9 @@ function App() {
               ))
             }
           </Grid>) :
-            <div style={{ height: "60vh", width: "40vw", borderRadius: 20, margin: "auto", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: "center" }}>
-              <img style={{ height: "60%", width: "40%", borderRadius: 20 }} src={empty} alt="empty" />
-              <h1>Nothing to see here, add notes.</h1>
+            <div style={{ height: "60vh", width: "50vw", borderRadius: 20, margin: "auto", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: "center" }}>
+              <img style={{ height: "60%", width: { sm: "60%", md: "40%" }, borderRadius: 20 }} src={empty} alt="empty" />
+              <Typography level='h1' sx={{ fontSize: { xs: "0.7rem", md: "1.5rem" } }}>Nothing to see here, add notes.</Typography>
             </div>
         }
 
